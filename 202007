@@ -1,0 +1,25 @@
+# 0722
+
+
+python获取apppool的identity
+
+翻了半天资料，没得现成的，而且vb不熟，python也不熟
+翻到可以使用wmi，win32com库操作WMI。
+都没查到具体直接使用方法
+
+oIIS = GetObject(r"winmgmts:root\WebAdministration")
+for pool in oIIS.InstancesOf("Application"):
+    appPoolName = pool.ApplicationPool
+    oAppDefn = oIIS.Get("ApplicationPool.Name='" + appPoolName + "'")
+    result.append({'ResourceType':'site', 'ServerName':'', 'ServerPort': '', 'SitePort': 0, 'DisplayName': pool.SiteName, 'ApplicationPool': appPoolName,
+                   'IdntityType': oAppDefn.ProcessModel.IdentityType})
+
+WMI的全称是Windows Management Instrumentation，即Windows管理规范。它是Windows操作系统上管理数据和操作的基础设施。
+
+https://www.cnblogs.com/dreamlofter/p/5846966.html
+
+
+https://docs.microsoft.com/en-us/iis/manage/scripting/managing-applications-and-application-pools-on-iis-with-wmi#creating-and-enumerating-applications
+
+
+https://docs.microsoft.com/en-us/iis/manage/provisioning-and-managing-iis/iis-7-wmi-provider
