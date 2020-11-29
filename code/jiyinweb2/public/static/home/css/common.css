@@ -1,0 +1,325 @@
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+* {
+  font-family: "微软雅黑";
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+.row {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#head {
+  line-height: 70px;
+  background: white;
+  border-bottom: solid 1px #ececec;
+}
+#head .menuOpen {
+  display: block;
+  height: 40px;
+  width: 32px;
+  background: url(../images/menu.png) no-repeat;
+  background-size: 100%;
+  margin-top: 24px;
+  float: right;
+}
+#head .logo {
+  height: 70px;
+  position: relative;
+}
+#head .logo a {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+#head .glyphicon-search,
+#head .menuIco {
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+  font-size: 20px;
+}
+#head .glyphicon-search {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 16px;
+  color: #333;
+}
+#head .searchInput {
+  line-height: 25px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 22px;
+  color: #757575;
+  width: 0;
+  padding: 0;
+  transition: all 0.3s;
+  height: 25px;
+}
+#head .on {
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 30px;
+  background: #164a8b;
+  color: white;
+}
+#head .on + i {
+  color: white;
+}
+#head .menu .col-sm-2:hover .son-ul {
+  display: block;
+}
+#head .menu .son-ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  color: #000000;
+  background: white;
+  padding: 10px 15px;
+  padding-bottom: 20px;
+}
+#head .menu .son-ul li {
+  line-height: 30px;
+}
+#head .menu .son-ul a {
+  color: #000 !important;
+  text-align: left;
+  border-bottom: solid 1px white;
+}
+#head .menu .son-ul a:hover,
+#head .menu .son-ul .active a {
+  border-bottom: solid 1px #000;
+}
+#head .menu li a {
+  text-align: center;
+  color: #000;
+  display: block;
+  margin: auto;
+  position: relative;
+  font-size: 16px;
+}
+#head .menu .active a,
+#head .menu li:hover a {
+  color: #164a8b;
+}
+main {
+  margin-top: 70px;
+}
+#menu {
+  position: fixed;
+  background: #000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+footer {
+  background: #303030;
+  padding: 45px 0px;
+  padding-bottom: 35px;
+}
+footer .img {
+  padding: 0;
+}
+footer img {
+  width: 100%;
+  max-width: 100px;
+}
+footer h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 13px;
+  margin-top: 0;
+}
+footer p {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+footer .left {
+  padding-left: 20px;
+}
+footer .left p {
+  color: #ffffff;
+}
+footer .right {
+  padding-top: 20px;
+}
+footer .right p {
+  color: #fefefe;
+  text-align: right;
+}
+#menu {
+  display: none;
+  background: #303030;
+}
+#menu .head {
+  height: 50px;
+  background: #242424;
+}
+#menu .head .exit {
+  width: 17px;
+  height: 17px;
+  background: url(../images/exit.png);
+  text-align: right;
+  cursor: pointer;
+  color: white;
+  display: block;
+  margin-top: 16px;
+  margin-right: 5%;
+  background-size: 100%;
+  float: right;
+}
+#menu .zk {
+  color: white;
+  position: absolute;
+  right: 5%;
+  width: 12px;
+  height: 12px;
+  background: url(../images/exit.png);
+  text-align: right;
+  background-size: 100%;
+  top: 21px;
+  transition: all 0.2s;
+}
+#menu .no {
+  transform: rotate(45deg);
+}
+#menu .accordion-heading {
+  position: relative;
+  border-bottom: solid 1px #4a4a4e;
+  margin: 0 5%;
+  line-height: 58px;
+}
+#menu a {
+  color: white;
+  font-size: 16px;
+  padding: 0 5%;
+  display: block;
+}
+#collapseOne {
+  transition: all 0.2s;
+  margin-bottom: 15px;
+}
+#collapseOne a {
+  display: block;
+  margin-left: 5%;
+  color: #888888;
+  line-height: 40px;
+}
+#collapseOne a:nth-child(1) {
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+.banner {
+  width: 100%;
+  position: relative;
+  background: url("../images/new_banner.jpg") no-repeat;
+  background-position: center top;
+  height: 250px;
+}
+.banner h2:before {
+  content: ".";
+  color: transparent;
+  width: 60%;
+  position: absolute;
+  bottom: -29px;
+  display: block;
+  margin-left: 20%;
+  height: 1px;
+  background: #000;
+}
+.banner h2 {
+  margin: 0;
+  font-size: 44px;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -mz-transform: translate(-50%, -50%);
+  color: #000000;
+  display: block;
+}
+.banner h2 span {
+  padding-top: 4px;
+  font-weight: 100;
+}
+.banner h2 .English {
+  font-size: 20px;
+  color: #b5b4b4;
+  line-height: 30px;
+  margin-top: 9px;
+  font-weight: 100;
+}
+@media (max-width: 1200px) {
+  #head .menu li a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+  #head .logo a {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  #head .logo a {
+    width: 120px;
+  }
+  footer .img img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  footer .right {
+    padding-top: 10px;
+  }
+  footer .right p {
+    text-align: left;
+  }
+  footer .left p,
+  footer .right p {
+    text-align: center;
+  }
+  footer h3 {
+    text-align: center;
+  }
+  footer .left {
+    border-bottom: solid 1px #545252;
+    padding-bottom: 15px;
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 414px) {
+  .banner {
+    background-position: center -8px;
+  }
+  .banner h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 320px) {
+  .banner h2 {
+    font-size: 28px;
+  }
+}
