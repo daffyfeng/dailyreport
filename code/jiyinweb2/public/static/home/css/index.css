@@ -6,11 +6,11 @@
     width: 100%;
   }
   .banner h2 {
-    font-size: 52px;
+    /* font-size: 52px; */
     position: absolute;
     top: 40%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     left: 40%;
     transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -19,7 +19,7 @@
     -ms-transform: translate(-50%, -50%);
     color: white;
     display: block;
-    width: 100%;
+    /* width: 100%; */
     opacity: 0;
     transition: all 1s;
   }
@@ -46,7 +46,7 @@
     opacity: 1;
   }
   .banner br {
-    display: none;
+    /* display: none; */
   }
   .banner h2:before {
     display: none;
@@ -75,18 +75,18 @@
     color: #000;
     font-size: 46px;
     padding-bottom: 10px;
-    width: 200px;
+    /* width: 200px; */
     margin: auto;
     margin-bottom: 30px;
     line-height: 35px;
   }
   .about .solid:after {
-    border-bottom: 1px solid #000;
+    border-bottom: 5px solid #847a7a;
     content: ".";
     color: transparent;
     display: block;
     margin: auto;
-    width: 50%;
+    width: 20%;
   }
   .about .text {
     color: #000;

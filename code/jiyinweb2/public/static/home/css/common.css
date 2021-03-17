@@ -259,7 +259,8 @@ footer .right p {
   display: block;
 }
 .banner h2 span {
-  padding-top: 4px;
+  padding-top: 8px;
+  font-size: medium;
   font-weight: 100;
 }
 .banner h2 .English {
