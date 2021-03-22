@@ -80,14 +80,14 @@
     margin-bottom: 30px;
     line-height: 35px;
   }
-  .about .solid:after {
+  /* .about .solid:after {
     border-bottom: 5px solid #847a7a;
     content: ".";
     color: transparent;
     display: block;
     margin: auto;
     width: 20%;
-  }
+  } */
   .about .text {
     color: #000;
     max-width: 1100px;
@@ -172,14 +172,7 @@
     margin-bottom: 30px;
     line-height: 35px;
   }
-  .project .solid:after {
-    border-bottom: 1px solid #000;
-    content: ".";
-    color: transparent;
-    display: block;
-    margin: auto;
-    width: 50%;
-  }
+  
   .project .row a {
     display: block;
   }
@@ -335,7 +328,7 @@
     }
   }
   main {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   main .swiper-pagination-bullet {
     background: white;
