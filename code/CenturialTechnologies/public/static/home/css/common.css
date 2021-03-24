@@ -40,10 +40,6 @@ a:hover {
 #head .menu li:hover a {
   color: #164a8b;
 }
-main {
-  margin-top: 103px;
-}
-
 .text-center{
   font-size: 46px;
 }
@@ -147,13 +143,20 @@ main {
   opacity: 1;
 }
 
+.mb-container h2,
+.as-container h2,
+.partner-container h2{
+  margin-top: 120px;
+}
+
 .ps-container{
   margin-top: 32px;
 }
 
-
 .ps-container-bg{
   background: url('../images/pic_productsystem.png') no-repeat;
+  background-size: 100% 100%;
+  min-width: 1500px;
   padding-bottom: 97px;
 }
 
@@ -242,7 +245,7 @@ main {
 }
 
 .as-container .about{
-  margin-top: 169px;
+  margin-top: 80px;
 }
 
 .as-container-flex{
@@ -327,6 +330,7 @@ footer {
   background: #303030;
   padding: 45px 0px;
   padding-bottom: 35px;
+  min-width: 1500px;
 }
 footer .img {
   padding: 0;
@@ -347,6 +351,7 @@ footer p {
 }
 footer .left {
   padding-left: 20px;
+  padding-bottom: 30px;
 }
 footer .left p {
   color: #ffffff;
@@ -366,7 +371,7 @@ footer .right p {
   text-align: right;
 }
 footer .content{
-  padding-bottom: 53px;
+  padding-bottom: 23px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.23);
 }
 footer .footer{
@@ -390,9 +395,7 @@ footer .footer{
 .banner {
   width: 100%;
   position: relative;
-  background: url("../images/new_banner.jpg") no-repeat;
-  background-position: center top;
-  height: 250px;
+  
 }
 .banner h2:before {
   content: ".";

@@ -23,6 +23,9 @@ $(function () {
 var mySwiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     paginationClickable: true,
+    prevButton:'.swiper-button-prev',
+    nextButton:'.swiper-button-next',
+    autoHeight: true,
     autoplay:3000,
     onSlideChangeEnd:function(data){
         var prev = data.previousIndex;

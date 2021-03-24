@@ -327,9 +327,6 @@
       font-size: 28px;
     }
   }
-  main {
-    /* overflow: hidden; */
-  }
   main .swiper-pagination-bullet {
     background: white;
     opacity: 1;
