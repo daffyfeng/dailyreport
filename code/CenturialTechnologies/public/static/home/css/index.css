@@ -334,11 +334,34 @@
   .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     margin-bottom: 1px;
   }
+
   main .swiper-pagination-bullet-active {
-    background: transparent;
-    border: solid 2px white;
-    width: 12px;
-    height: 12px;
+    background-color: white;
+    /* border: solid 1px white; */
+    width: 39px;
+    height: 3px;
+    opacity: 1 !important;
     margin-bottom: 0px !important;
   }
+
+  .swiper-button-next, .swiper-button-prev{
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+  }
+
+  .swiper-button-next{
+    background-image: url("../images/ic_right.png");
+  }
+
+  .swiper-button-prev{
+    background-image: url("../images/ic_left.png");
+  }
   
+  .swiper-pagination-bullet{
+    margin-bottom: 0px !important;
+    width: 39px;
+    height: 3px;
+    border-radius: 0;
+    opacity: 0.43 !important;
+  }

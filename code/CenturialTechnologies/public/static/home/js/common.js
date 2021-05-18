@@ -1,30 +1,4 @@
-// scroll
-// $(window).scroll(function(){
-// 	var top = $(window).scrollTop();
-// 	if(top>200){
-// 		$("#head").css("background","rgba(0, 0, 0, 1)");
-// 	}else{
-// 		$("#head").css("background","rgba(0, 0, 0, 0.27)");
-// 	}
 
-// })
-// seach
-$(".glyphicon-search").click(function(){
-	if(/on/.test($(".searchInput").attr("class"))){
-		search($(".searchInput").val());
-	}else{
-		$(".searchInput").addClass("on").focus();
-	}
-})
-$('.searchInput').bind('keypress',function(event){ 
-    if(event.keyCode == 13) {  
-         search($('.searchInput').val());  
-     }  
- });
-function search(q){
-	window.open("serach.html?q="+q);
-}
-// menu
 $("#menu .exit").click(function(){
 		$("#menu").removeClass("menuIn").slideUp();
 	})
@@ -37,3 +11,47 @@ $("#menu .exit").click(function(){
 	$('#collapseOne').on('show.bs.collapse', function () {
 	  $("#menu .zk").removeClass("no");
 	})
+
+$(".solution .card").click(function(){
+	$(this).addClass('active').siblings().removeClass('active');
+	$(".solution .d-none").eq($(this).index()).addClass('active').siblings().removeClass('active');
+})
+
+var hash = window.location.hash
+if (hash){
+	$(hash).addClass('active').siblings().removeClass('active');
+	$(".solution .d-none").eq($(hash).index()).addClass('active').siblings().removeClass('active');
+}
+
+$(".mb-container .node").click(function(){
+	
+	var index = $(this).index();
+	if (index === 0){
+		window.open('./solution.html#system_integration', '_self')
+	}
+
+	if (index === 1){
+		window.open('./solution.html#data_center', '_self')
+	}
+
+	if (index === 2){
+		window.open('./solution.html#intelligent_building', '_self')
+	}
+
+	if (index === 3){
+		window.open('./solution.html#holographic_projection', '_self')
+	}
+})
+
+
+$("#product").click(function(){
+	window.open('./solution.html')
+})
+
+$("#wownow").click(function(){
+	window.open('https://e.huawei.com/en/products/network-energy/dc-facilities/ids2000')
+})
+
+$("#peninsula").click(function(){
+	window.open('https://zkteco.com/en/scheme_detail/9.html')
+})

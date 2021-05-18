@@ -1,32 +1,11 @@
-$(function () {
-    var $carousels = $('.carousel');
-    $carousels.carousel({interval: 4000})
-    var startX,endX;
-    var offset = 50;
-    $carousels.on('touchstart',function (e) {
-        startX = e.originalEvent.touches[0].clientX;
-        $carousels.carousel('pause');
-    });
-    $carousels.on('touchmove',function (e) {
-        endX = e.originalEvent.touches[0].clientX;
-    });
-    $carousels.on('touchend',function (e) {
-    	$carousels.carousel({interval: 4000})
-        var distance = Math.abs(startX - endX);
-        if (distance > offset){
-            $(this).carousel(startX >endX ? 'next':'prev');
-        }
-    }) 
-});
-
-
 var mySwiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     paginationClickable: true,
     prevButton:'.swiper-button-prev',
     nextButton:'.swiper-button-next',
     autoHeight: true,
-    autoplay:3000,
+    setWrapperSize: true,
+    autoplay: 3000,
     onSlideChangeEnd:function(data){
         var prev = data.previousIndex;
         var index = data.activeIndex;
