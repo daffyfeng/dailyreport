@@ -10,7 +10,7 @@ module.exports = {
     outputDir: 'dist/workflow',
 }
 ```
-同事修改router的base地址
+同时修改router的base地址
 ```javascript
 export default new Router({
   mode: 'history', 
@@ -49,3 +49,4 @@ http {
 
 ### 参考
 [vue router使用history模式发布nginx的打包配置](https://blog.csdn.net/xlt_jbwkj/article/details/124836668)
+[vue（1）-配置（1）publicpath、nginx、vue-router的base](https://blog.csdn.net/qq_42440919/article/details/121922183)
