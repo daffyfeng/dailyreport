@@ -15,3 +15,21 @@
 create extension extension_name schema schema_name;
 alter extension extension_name set schema schema_name;
 ```
+
+## 坑
+
+数据库连接中指定了currentSchema，发现无效
+
+修改search_path方法
+
+```sql
+SET search_path TO itsm;
+
+ALTER database "数据库" SET search_path TO "模式";
+
+## 上门两个我都没成功，用的下面这条语句
+
+alter user “aaaa” set search_path TO "模式";
+```
+
+
