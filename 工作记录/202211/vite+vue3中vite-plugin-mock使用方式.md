@@ -47,6 +47,9 @@ export default ({ command }: ConfigEnv) => {
 
 ```
 
+mockPath目录下的ts文件，localEnabled为true时会自动加入mock中
+当生产环境时，prodEnabled为true，injectCode会自动注入到main.ts中，介时生产环境下也能使用mock
+
 [vite+vue3中vite-plugin-mock使用方式](https://www.jianshu.com/p/ca4f0dd4de13)
 
 [vite+vue3引入mock模块配置](https://blog.csdn.net/lareinax5/article/details/125167162)
