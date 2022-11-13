@@ -287,3 +287,8 @@ module.exports = function wrapper(context) {
     }
 }
 ```
+
+### 参考
+[浅析npm run serve命令](https://blog.csdn.net/qq_31772441/article/details/119941900)
+[WebpackDevServer实现请求转发以及解决单页面应用路由问题](https://blog.csdn.net/qq_39207948/article/details/113832349)
+[vue-路由history模式刷新页面404及上线后的代理问题](https://blog.csdn.net/RequesToGod/article/details/126284395)
