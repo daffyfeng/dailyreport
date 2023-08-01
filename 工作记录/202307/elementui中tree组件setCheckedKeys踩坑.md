@@ -6,7 +6,7 @@
 ## 踩坑
 
 前端展示时，增加了一个只读模式，所以 tree 需要设置 disabled。问题就出现了，所有节点 disabled 都设置为 true 时，
-*setCheckedKeys()*只能选中叶子节点
+**setCheckedKeys()** 只能选中叶子节点
 disabled 的时候，tree 组件将节点之间的交互给停了
 
 源码
