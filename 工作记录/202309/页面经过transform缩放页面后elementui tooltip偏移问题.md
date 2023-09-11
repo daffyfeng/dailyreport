@@ -166,9 +166,11 @@ Popper.prototype._getOffsets = function (popper, reference, placement) {
     };
   };
 
-// getBoundingClientRect方法，在body整个scale缩放后，获取到的值都是缩放后的；而页面直接缩放后，getBoundingClientRect获取的值不会改变，偏移就是这样产生的，解决的方法只有重新计算
+// getBoundingClientRect方法，在body整个scale缩放后，获取到的值都是缩放后的；
+// 而页面直接缩放后，getBoundingClientRect获取的值不会改变，偏移就是这样产生的，解决的方法只有重新计算
 
-// vue-popper.js初始化时, 会去获取popperOptions中onUpdate，如果这个属性是方法，就会将其添加到this.state.updateCallback上，这个方法在update执行时也会跟着执行，而且是在runModifiers后
+// vue-popper.js初始化时, 会去获取popperOptions中onUpdate，如果这个属性是方法，
+// 就会将其添加到this.state.updateCallback上，这个方法在update执行时也会跟着执行，而且是在runModifiers后
 createPopper() {
       ...
       const options = this.popperOptions;
@@ -186,5 +188,30 @@ createPopper() {
   };
 
 // <el-tooltip>中有popper-options这个设置项，传入一个function，修改popper.left top即可
+data: {
+  ...
+  popperOptions: {
+    boundariesPadding: 10,
+    gpuAcceleration: false,
+    onUpdate: this.onUpdateTooltip
+  }
+},
+methods: {
+  onUpdateTooltip(data) {
+    console.log(data);
+
+    const { _popper } = data.instance
+    const { popper, reference } = data.offsets
+
+    const ele = document.documentElement.querySelector("body")
+    const transform = ele.style.transform
+    const position = /\(.*\)/.exec(transform)[0].replace('(', '').replace(')', '').split(',')
+    // body上设置了transform: scale(xx, xx)
+    const scaleX = Number(position[0]), scaleY = Number(position[1])
+    // 参照_getOffsets方法，还原reference的位置数据重新计算
+    _popper.style['left'] = Math.round(reference.left / scaleX + (reference.width / scaleX) / 2 - popper.width / 2) + 'px'
+    _popper.style['top'] = Math.round(reference.top / scaleY - popper.height) + 'px'
+  },
+}
 ```
 
